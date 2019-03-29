@@ -31,6 +31,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation project(':mylibrary')
 
+   // implementation 'com.github.jason609:MyMusic:V1.0'
+
     implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
 
 }
