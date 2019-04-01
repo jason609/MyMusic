@@ -179,6 +179,10 @@ public class OpenGLDemoActivity extends AppCompatActivity{
         if (mPlayer!=null){
             mPlayer.pause();
         }
+
+        if(gl_surface!=null){
+            gl_surface.onPause();
+        }
     }
 
     @Override
@@ -186,6 +190,10 @@ public class OpenGLDemoActivity extends AppCompatActivity{
         super.onResume();
         if (mPlayer!=null){
             mPlayer.resume();
+        }
+
+        if(gl_surface!=null){
+            gl_surface.onResume();
         }
     }
 
@@ -195,15 +203,17 @@ public class OpenGLDemoActivity extends AppCompatActivity{
         if (mPlayer!=null){
             mPlayer.stop();
         }
+
+
     }
 
 
 
     public void begin(View view){
         // mPlayer.setSource("http://mpge.5nd.com/2015/2015-11-26/69708/1.mp3");
-        //  String path=Environment.getExternalStorageDirectory()+File.separator+"张韶涵+传世之爱.ape";
-       // String path= Environment.getExternalStorageDirectory()+ File.separator+"[阳光电影www.ygdy8.net]寻夢環游记.HD.720p.国英双语中字.mkv";
-         String path= Environment.getExternalStorageDirectory()+ File.separator+"test.mp4";
+        //  String path=Environment.getExternalStorageDirectory()+File.separator+"abc.wmv";
+        String path= Environment.getExternalStorageDirectory()+ File.separator+"樹大招風國語.mp4";
+       //  String path= Environment.getExternalStorageDirectory()+ File.separator+"甜蜜蜜.avi";
         mPlayer.setSource(path);
        // mPlayer.setSource("rtmp://123.232.118.118:1935/live/T143985769_1_0?token=Hf5QetTQ1Wq4FYBH0Z0xiNOZ2Z2qZ0JmbT5auZ0JpGc25A01rogmxfBjriqQYSNFthi16mfiJ8O6J7VPyK3G4oOZ1mu3GLZ1oZ0vndZ0pibdWcesxVBcZ3");
         mPlayer.parpared();

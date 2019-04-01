@@ -332,7 +332,7 @@ void pcmBufferCallBack(SLAndroidSimpleBufferQueueItf bfq,void *context){
          if(bufferSize>0){
              audio->clock+=bufferSize/((double)audio->sample_rate*2*2);
            //  if(audio->clock>audio->duration)return;
-             if(audio->clock-audio->last_time>=0.5) {
+             if(audio->clock-audio->last_time>=0.1) {
                  audio->last_time=audio->clock;
                  audio->jtCallJava->onCallInfo(CHILD_THREAD, audio->clock, audio->duration);
              }
